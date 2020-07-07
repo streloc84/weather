@@ -25,7 +25,7 @@ class GetWeather extends React.Component {
     //отправляем запрос к API metaweather.com на основе координат
     componentDidUpdate=(prevProps)=>{
             
-      const URL="https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?lattlong="+this.props.latitude+","+this.props.longitude;
+      const URL="https://fathomless-spire-81147.herokuapp.com/https://www.metaweather.com/api/location/search/?lattlong="+this.props.latitude+","+this.props.longitude;
       
       //записываем ответ (массив ближайших метеостанций) в состояние
       if(this.props.latitude!==prevProps.latitude||this.props.longitude!==prevProps.longitude){
@@ -43,7 +43,7 @@ class GetWeather extends React.Component {
       }
         
       if(this.state.woeid!==0){
-        var URLsity="https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/"+this.state.woeid+"/";
+        var URLsity="https://fathomless-spire-81147.herokuapp.com/https://www.metaweather.com/api/location/"+this.state.woeid+"/";
       }
        //Запрашиваем погоду ближайшей метеостанции
       if(this.state.latitude!==prevProps.latitude&&this.state.woeid!==0){
